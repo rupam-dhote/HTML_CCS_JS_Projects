@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#canvas1{
+    
+    background-color: black;
+    
+    width:100vw;
+    height: 100vh;
+}
+
+#container{
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+}
+.textcolor{
+    color:aliceblue;
+    font-size: 0.7rem;
+    text-align: center;
+}
+#colorScheme{
+    position: absolute;
+    top:0;
+    left:0;
+    display: none;
+    width: auto;
+    height: auto;
+    padding: 0.6rem 0 0 0.6rem;
+}
+input[type="color"] {
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    appearance: none;
+    border:0.2rem solid white;
+    width: 1.8rem; /* Size of the circle */
+    height: 1.8rem;
+    border-radius: 50%; /* Make it circular */
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  /* Remove the default square swatch padding */
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%; /* Ensure circular appearance in WebKit browsers */
+  }
+
+  /* Style the swatch to make it circular */
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%; /* Make the swatch circular */
+  }
+  .hover{
+    transition: linear 0.3s;
+  }
+  .hover:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .hover:active{
+    cursor: progress;
+    transform: scale(0.8);
+  }
+.selectColors{
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0.2rem solid rgb(139, 140, 141);
+    border-radius: 50%;
+}
+.grid{
+    width: 15rem;
+    display: grid;
+    grid-template-columns:repeat(3,0.5fr);
+}
+#opacityInput{
+    width: 3.7rem;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:0.4rem;
+}
+.top{
+    text-align: center;
+    justify-self: start;
+}
+
+#btn{
+   
+    width: 200px;
+    height: 50px;
+    border:none;
+    border-radius: 2rem;
+    background: transparent;
+    box-shadow: 0 0 2px azure,0 0 4px azure;
+    color: azure;
+    font-size: 1rem;
+}
+
+#colorcycle{
+    background: linear-gradient(90deg, red, orange, yellow, green, blue);
+}
