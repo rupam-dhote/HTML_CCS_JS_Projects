@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+:root {
+  --btncolor: rgb(0, 0, 0);
+  --exitcolor: rgb(3, 3, 3);
+}
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./game.jpeg);
+  background-size: cover;
+}
+#game-settings {
+  position: absolute;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 2rem;
+}
+#ex {
+  display: none;
+  position: absolute;
+  top: 57.2%;
+  height: 50px;
+  width: 100px;
+  background: transparent;
+  backdrop-filter: blur(7px);
+  color: var(--exitcolor);
+  border: none;
+  box-shadow:
+    0 0 2px var(--exitcolor),
+    0 0 3px var(--exitcolor);
+  border-radius: 50px;
+  font: 1.1rem cursive;
+  transition: all 0.1s linear;
+}
+#ex:hover {
+  transform: translateY(2px);
+  font: 1rem cursive;
+  box-shadow:
+    0 0 2px var(--exitcolor),
+    0 0 3px var(--exitcolor),
+    0 0 5px var(--exitcolor),
+    0 0 6px var(--exitcolor),
+    0 0 8px var(--exitcolor);
+}
+#ex:active {
+  transform: scale(0.8);
+}
+#btn {
+  display: none;
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background: transparent;
+  backdrop-filter: blur(7px);
+  color: var(--btncolor);
+  border: none;
+  box-shadow:
+    0 0 2px var(--btncolor),
+    0 0 3px var(--btncolor);
+  border-radius: 50px;
+  font: 0.9rem cursive;
+  transition: all 0.1s linear;
+}
+#btn:hover {
+  transform: translateY(2px);
+  font: 1rem cursive;
+  box-shadow:
+    0 0 2px var(--btncolor),
+    0 0 3px var(--btncolor),
+    0 0 5px var(--btncolor),
+    0 0 6px var(--btncolor),
+    0 0 8px var(--btncolor);
+}
+#btn:active {
+  transform: scale(0.8);
+}
+#start-game {
+  height: 50px;
+  width: 100px;
+  background: transparent;
+  color: azure;
+  border: none;
+  box-shadow:
+    0 0 2px azure,
+    0 0 3px azure;
+  border-radius: 50px;
+  font: 0.9rem cursive;
+  transition: all 0.1s linear;
+}
+#start-game:hover {
+  transform: translateY(2px);
+  font: 1rem cursive;
+  box-shadow:
+    0 0 2px azure,
+    0 0 3px azure,
+    0 0 5px azure;
+}
+#start-game:active {
+  transform: scale(0.8);
+}
+
+#win-info {
+  position: absolute;
+  top: 35%;
+  color: rgb(245, 244, 238);
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: "Arial Narrow Bold", sans-serif;
+  animation: move 2.4s ease-out 0.2s infinite;
+}
+@keyframes move {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+input {
+  background: transparent;
+  height: 50px;
+  width: 100px;
+  font: 2rem cursive;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  border: none;
+  cursor: pointer;
+}
+
+label {
+  color: rgb(2, 21, 19);
+  font-size: 2.5rem;
+  font-family: cursive, fantasy, sans-serif;
+  text-shadow:
+    2px 0 2px rgb(200, 180, 80),
+    3px 0 2px rgb(81, 110, 189);
+}
+#game-time-remaining {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: antiquewhite;
+  font-size: 1.5rem;
+}
+/* .paddle {
+  position: absolute;
+  margin-left: 2px;
+  width: 20px;
+  height: 120px;
+  background: linear-gradient(45deg, gray, black, grey);
+  top: 50%;
+  left: 0;
+} */
+#pong-game {
+  display: flex;
+  height: 100vh;
+  width: 99vw;
+  text-align: center;
+  border: 3px solid orange;
+  border-left: 3px solid #b67600;
+  border-right: 3px solid #b67600;
+  background: transparent;
+}

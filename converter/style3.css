@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(135deg,rgba(0, 0, 0, 0.973),rgba(0, 0, 0, 0.863),rgba(0, 0, 0, 0.920));
+
+}
+
+.area{
+    margin-left: 0;
+  background:transparent;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  max-width: 540px;
+  height: 500px;
+  border: none;
+  flex-direction: column;
+  border-radius: 40px;
+
+
+}
+h1{
+    color:cyan;
+    align-self:center;
+}
+h1.col{
+    color:red;
+}
+
+input{
+    margin:20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    background: rgb(232, 224, 224);
+     color: black;
+}
+button{
+width: 100%;
+max-width: 100px;
+height: 50px;
+border: none;
+outline: none;
+font-size: 2em;
+border-radius: 40px;
+font-size: 1em;
+box-shadow: 0 0 5px cyan;
+color:cyan;
+background:rgba(0, 0, 0, 0.688);
+transition: all 0.4s ease;
+margin-bottom: 20px;
+margin-top: 10px;
+cursor: pointer;
+}
+button.cng{
+    color: red;
+    box-shadow: 0 0 3px red;
+}
+button.cng:hover{
+ box-shadow: 0 0 5px red,0 0 10px red,0 0 15px red;
+   
+    text-transform: uppercase;
+}
+button.cng:active{
+    transform: scale(0.9);
+    box-shadow: 0 0 5px red,0 0 10px red,
+    0 0 15px red,0 0 25px red,0 0 35px red,0 0 50px red;
+    color: rgb(0, 0, 9);
+}
+p{
+    width:100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 2em;
+
+    outline: none;
+    border: none;
+    color:black;
+    background: transparent;
+    margin: 10px 0;
+}
+.stl{
+    width:100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 30px;
+
+    outline: none;
+    border: none;
+    color:rgba(255, 255, 255, 0.497);
+    background: transparent;
+    margin:0;
+}
+option{
+    color:black;
+    background-color:rgba(0, 0, 0, 0.542)
+}
+button:hover{
+    box-shadow: 0 0 5px cyan,0 0 10px cyan,0 0 15px cyan;
+    text-transform: uppercase;
+}
+button:active{
+    transform: scale(0.9);
+    box-shadow: 0 0 5px cyan,0 0 10px cyan,
+    0 0 15px cyan,0 0 25px cyan,0 0 35px cyan,0 0 50px cyan;
+    color: rgb(0, 0, 9);
+}
