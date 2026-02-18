@@ -4,14 +4,16 @@ let arrayParticle = [];
 const button = document.getElementById("container");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-let hue = 0,sat=100,lig=50;
-let colorvalue=null;
-let opacity=0.08;
-let flag=true;
-let speed=null;
+let hue = 0,
+  sat = 100,
+  lig = 50;
+let colorvalue = null;
+let opacity = 0.08;
+let flag = true;
+let speed = null;
 button.addEventListener("click", () => {
   button.style.display = "none";
-  document.getElementById('colorScheme').style.display='block';
+  document.getElementById("colorScheme").style.display = "block";
   window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -25,34 +27,32 @@ button.addEventListener("click", () => {
     y: null,
   };
 
-//to handle user input color ***********************************
-  
-const colorInput = document.getElementById('colorInput');
-colorInput.addEventListener('input',()=>{
-  colorvalue=colorInput.value;
-})
+  //to handle user input color ***********************************
 
-//To handle colorcycle input ************************************
+  const colorInput = document.getElementById("colorInput");
+  colorInput.addEventListener("input", () => {
+    colorvalue = colorInput.value;
+  });
 
-  const colorcycle=document.getElementById('colorcycle');
-  colorcycle.addEventListener('click',()=>{
-    colorvalue=null;
-    speed=2;
-  })
+  //To handle colorcycle input ************************************
 
-//to handle opacity input ****************************************
- 
- document.getElementById('opacityInput').addEventListener('input',e=>{
-  if(e.target.value/100==0.1)
-  {
-    opacity=1;
-  }
-  else{
-    opacity=e.target.value/100;
-  }
- })
+  const colorcycle = document.getElementById("colorcycle");
+  colorcycle.addEventListener("click", () => {
+    colorvalue = null;
+    speed = 2;
+  });
 
- //****************************************************************
+  //to handle opacity input ****************************************
+
+  document.getElementById("opacityInput").addEventListener("input", (e) => {
+    if (e.target.value / 100 == 0.1) {
+      opacity = 1;
+    } else {
+      opacity = e.target.value / 100;
+    }
+  });
+
+  //****************************************************************
   canvas.addEventListener("click", (e) => {
     mouse.x = e.x;
     mouse.y = e.y;
@@ -69,12 +69,10 @@ colorInput.addEventListener('input',()=>{
       this.speedX = Math.random() * 3 - 1.5;
       this.speedY = Math.random() * 3 - 1.5;
 
-      if(colorvalue!=null)
-      {
+      if (colorvalue != null) {
         this.color = `${colorvalue}`;
-      }
-      else{
-      this.color = `hsl(${hue},${sat}%,${lig}%)`;
+      } else {
+        this.color = `hsl(${hue},${sat}%,${lig}%)`;
       }
     }
 
@@ -104,14 +102,10 @@ colorInput.addEventListener('input',()=>{
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     handleParticle();
     requestAnimationFrame(animate);
-   
-    if(speed!=null)
-    {
+
+    if (speed != null) {
       hue += speed;
     }
-      
-    
-    
   }
 
   function handleParticle() {
@@ -141,4 +135,3 @@ colorInput.addEventListener('input',()=>{
   }
   animate();
 });
-

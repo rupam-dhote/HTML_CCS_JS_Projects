@@ -1,40 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Particle Using Canvas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- color ko change karne ki schem -->
-   <div id="colorScheme">
-    <div class="grid">
+    <div id="colorScheme">
+      <div class="grid">
         <div class="flex">
-            <label for="colorInput" class="textcolor">Select Color</label>
-            <input type="color" id="colorInput" class="hover" value="#ff0000">
+          <label for="colorInput" class="textcolor">Select Color</label>
+          <input type="color" id="colorInput" class="hover" value="#ff0000" />
         </div>
         <div class="flex">
-            <p class="textcolor">Color Cycle</p>
-            <div class="selectColors hover" id="colorcycle"></div>
+          <p class="textcolor">Color Cycle</p>
+          <div class="selectColors hover" id="colorcycle"></div>
         </div>
-        <div class="flex" style="justify-content: space-between; position: relative;">
-            <label for="colorInput" class="textcolor top">Select Opacity</label>
-            <input type="range" id="opacityInput" class="hover" min="0" max="10" value="8" style="position: absolute; top:50%;">
+        <div
+          class="flex"
+          style="justify-content: space-between; position: relative"
+        >
+          <label for="colorInput" class="textcolor top">Select Opacity</label>
+          <input
+            type="range"
+            id="opacityInput"
+            class="hover"
+            min="0"
+            max="10"
+            value="8"
+            style="position: absolute; top: 50%"
+          />
         </div>
+      </div>
     </div>
-   </div>
 
-     <!-- canav element for drawing -->
+    <!-- canav element for drawing -->
     <canvas id="canvas1"></canvas>
 
     <!-- strat button container -->
     <div id="container">
-        <button id="btn" >Start</button>
+      <button id="btn">Start</button>
     </div>
-    
 
-    
     <script src="particle.js"></script>
-</body>
+  </body>
 </html>
