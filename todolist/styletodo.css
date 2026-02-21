@@ -4,19 +4,25 @@
   font-family: "Times New Roman", sans-serif;
   box-sizing: border-box;
 }
+#list1::-webkit-scrollbar {
+  width: 0px;
+}
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
 .container {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(135deg, #133f96, #a816cc);
   padding: 10px;
 }
 .todoarea {
-  width: 100%;
   max-width: 540px;
   background: #ffffffec;
-  margin: 100px auto 20px;
-  padding: 40px 30px 70px;
+  margin: 10px auto;
+  padding: 40px 30px 20px;
   border-radius: 20px;
 }
 .todoarea h1 img {
@@ -116,4 +122,20 @@ ul li span:hover {
 ul li span:active {
   transform: scale(0.9);
   background: #ababad;
+}
+#list1 {
+  overflow-x: hidden;
+  max-height: 68vh;
+  overflow-y: scroll;
+}
+@media (width<756px) {
+  #btn {
+    padding: 10px 10px;
+  }
+  input {
+    width: 100%;
+  }
+  ul li {
+    padding-right: 25px;
+  }
 }
